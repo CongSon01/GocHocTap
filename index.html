@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Góc học tập</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/image/logo.png" type="image/gif" sizes="48x48">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="containter-main">
+            <div class="name">
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round"></div>
+                    </label>
+                </div>
+                <h2>Công Sơn</h2>
+            </div>
+            <!-- Tab items   -->
+            <div class="tabs">
+                <div class="tab-item active">
+                    <i class="tab-icon fas fa-home"></i>
+                    Home
+                </div>
+                <div class="tab-item">
+                    <i class="tab-icon fas fa-list"></i>
+                    To do list
+                </div>
+                <div class="tab-item">
+                    <i class="tab-icon fas fa-music"></i>
+                    Music
+                </div>
+                <div class="tab-item">
+                    <i class="tab-icon fas fa-clock"></i>
+                    Break Time
+                </div>
+                <div class="line"></div>
+            </div>
+
+            <!-- Tab content -->
+            <div class="tab-content">
+                <div class="tab-pane active">
+                    <div class="inf-main">
+                        <h2>Giới thiệu về tôi</h2>
+                        <p> Hi chào bạn mình là<b> Dương Công Sơn </b><br>
+                            Chào các bạn tới với góc học tập của mình.</p>
+                    </div>
+                </div>
+                <div class="tab-pane">
+                    <div class="todolist">
+                        <div id="myDIV" class="headerList">
+                            <div class="btn-list">
+                                <input type="text" id="myInput" placeholder="Add your new todo">
+                                <span onclick="newElement()" class="addBtn">+</span>
+                            </div>
+                        </div>
+    
+                        <ul id="myUL">
+                            <li>Learn English (45ph)</li>
+                            <li>Read a book</li>
+                            <li>Do exercise (2km)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-pane">
+                    <div class="player">
+                        <div class="dashboard">
+                            <header>
+                                <h4>Music</h4>
+                                <h2>No Name</h2>
+                                <p>No Name</p>
+                            </header>
+                            
+                            <div class="cd" style="width: 100px; opacity: 1;">
+                                <div class="cd-thumb" style="background-image: url('')">
+                                </div>
+                                <div class="cd-inner--1"></div>
+                                <div class="cd-inner--2"></div>
+                            </div>
+
+                            <div class="time">
+                                <p class="playing-time">00:00</p>
+                                <p class="duration-time">--:--</p>
+                            </div>
+
+                            <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+
+                            <audio id="audio" src=""></audio>
+
+                            <div class="control">
+                                <div class="btn btn-random">
+                                    <i class="fas fa-random"></i>
+                                </div>
+
+                                <div class="btn btn-prev" title="Previous">
+                                    <i class="fas fa-step-backward"></i>
+                                </div>
+
+                                <div class="btn btn-toggle-play" title="Play">
+                                    <i class="fas fa-pause icon-pause"></i>
+                                    <i class="fas fa-play icon-play"></i>
+                                </div>
+
+                                <div class="btn btn-next" title="Next">
+                                    <i class="fas fa-step-forward"></i>
+                                </div>
+
+                                <div class="btn btn-repeat">
+                                    <i class="fas fa-retweet"></i>
+                                </div>
+                            </div>
+
+                            <div class="volume">
+                                <div class="btn active btn-volume-mute" title="Unmute" style="display: none">
+                                    <i class="fas fa-volume-mute"></i>
+                                </div>
+
+                                <div class="btn active btn-volume-down" title="Mute" style="display: none">
+                                    <i class="fas fa-volume-down"></i>
+                                </div>
+
+                                <div class="btn active btn-volume-up" title="Mute">
+                                    <i class="fas fa-volume-up"></i>
+                                </div>
+
+                                <input id="volume-progress" class="volume-progress" type="range" value="100" step="1"
+                                    min="0" max="100">
+
+                                <span class="volume-value-text">Vol: </span>
+                                <span class="volume-value">--</span>
+                            </div>
+                        </div>
+
+                        <div class="playlist">
+                            <div class="playlist__heading">
+                                <h2>Playlist</h2>
+                            </div>
+
+                            <div class="playlist__list"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane">
+                    <div class="inf-main">
+                    <h2>Nhớ nghỉ đúng lúc nhé !</h2>
+                </div>
+                    <div class="btn-list">
+                        <input class="myBreak" list="myBreak" name="myBrowser" placeholder="Set your time out "/>
+                        <datalist id="myBreak">
+                          <option value="1800"> 
+                          <option value="2700">
+                          <option value="5400">
+                        </datalist>
+                        <span id="btnBreak" class="addBtn">+</span>
+                    </div>
+                    <section>
+                        <div class="container-time">
+                          <h1 class="countDown">00:00</h1>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
