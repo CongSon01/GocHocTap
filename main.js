@@ -705,4 +705,5 @@ audio1.src = source;
 audio1.autoplay = false;
 function endCount() {
     audio1.play();
+    audio2.pause();
 }
