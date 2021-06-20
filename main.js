@@ -673,7 +673,7 @@ btnTimeOut.onclick = function() {
     audio2.play();
     document.documentElement.setAttribute("data-theme", "dark")
     toggleSwitch.checked = true
-    audio2.volume = 0.1
+    audio2.volume = 0.08
 }
 
 
@@ -706,4 +706,6 @@ audio1.autoplay = false;
 function endCount() {
     audio1.play();
     audio2.pause();
+    document.documentElement.setAttribute("data-theme", "light")
+    toggleSwitch.checked = false
 }
