@@ -667,6 +667,17 @@ audio2.src = source2;
 audio2.autoplay = false;
 audio2.loop = true;
 
+var source = "./assets/music/Tôi_đã_làm_việc_được_tận_5_phút___Shorts.mp3"
+var audio1 = new Audio();
+audio1.src = source;
+audio1.autoplay = false;
+function endCount() {
+    audio1.play();
+    audio2.pause();
+    document.documentElement.setAttribute("data-theme", "light")
+    toggleSwitch.checked = false
+}
+
 btnTimeOut.onclick = function() {
     timeSecond = timeOut.value;
     window.scrollTo(500, 500)
@@ -674,18 +685,17 @@ btnTimeOut.onclick = function() {
     document.documentElement.setAttribute("data-theme", "dark")
     toggleSwitch.checked = true
     audio2.volume = 0.08
+    displayTime(timeSecond);
+	const countDown = setInterval(() => {
+	  timeSecond--;
+	  displayTime(timeSecond);
+	  if (timeSecond == 0 || timeSecond < 1) {
+	    endCount();
+	    clearInterval(countDown);
+	  }
+	}, 1000);
+
 }
-
-
-displayTime(timeSecond);
-const countDown = setInterval(() => {
-  timeSecond--;
-  displayTime(timeSecond);
-  if (timeSecond == 0 || timeSecond < 1) {
-    endCount();
-    clearInterval(countDown);
-  }
-}, 1000);
 
 function displayTime(second) {
   if (second) {
@@ -699,13 +709,4 @@ function displayTime(second) {
   }
   
 }
-var source = "./assets/music/Tôi_đã_làm_việc_được_tận_5_phút___Shorts.mp3"
-var audio1 = new Audio();
-audio1.src = source;
-audio1.autoplay = false;
-function endCount() {
-    audio1.play();
-    audio2.pause();
-    document.documentElement.setAttribute("data-theme", "light")
-    toggleSwitch.checked = false
-}
+
