@@ -673,6 +673,7 @@ btnTimeOut.onclick = function() {
     audio2.play();
     document.documentElement.setAttribute("data-theme", "dark")
     toggleSwitch.checked = true
+    audio2.volume = 0.1
 }
 
 
