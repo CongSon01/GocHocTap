@@ -239,7 +239,7 @@ const app = {
 
         // Phát / dừng nhạc khi nhấn `space`
 		document.onkeydown = function(e) {
-			if(e.code === "Space") {
+			if(e.code === "ControlLeft+Space") {
                 e.preventDefault()
 				if (_this.isPlaying) {
                     audio.pause()
