@@ -71,6 +71,12 @@ const app = {
 
     songs: [
         {
+            name: "Phố đã lên đèn",
+            singer: "Công Sơn",
+            path: "./assets/music/pho_da_len_den_huyen_tam_mon_cukak_remix_audio_lyrics_-2498468810678559091.mp3",
+            image: "./assets/image/phodalenden.jpg"
+        },
+        {
             name: "Skyler",
             singer: "Son tung MTP",
             path: "./assets/music/skyler.mp3",
