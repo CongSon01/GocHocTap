@@ -679,6 +679,7 @@ audio1.src = source;
 audio1.autoplay = false;
 function endCount() {
     audio1.play();
+    audio1.volume = 0.09
     audio2.pause();
     document.documentElement.setAttribute("data-theme", "light")
     toggleSwitch.checked = false
