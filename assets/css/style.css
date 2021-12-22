@@ -93,6 +93,10 @@ html {
     background-color: rgba(54, 54, 54, 0.05);
     border-color: rgba(75, 74, 74, 0.1);
 }
+.tab-item a {
+    color: var(--black-color);
+    text-decoration: none;
+}
 .tab-icon {
     font-size: 18px;
     width: 32px;
