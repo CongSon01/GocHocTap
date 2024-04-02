@@ -71,6 +71,18 @@ const app = {
 
     songs: [
         {
+            name: "Chúng ta của tương lai",
+            singer: "Sơn Tùng MTP",
+            path: "./assets/music/CHÚNG TA CỦA TƯƠNG LAI _ AUDIO ONLY.mp3",
+            image: "./assets/image/CTCTL1.jpg"
+        },
+        {
+            name: "Chúng ta của tương lai remix",
+            singer: "AM Remix",
+            path: "./assets/music/Chúng Ta Của Tương Lai Ft Nâng Chén Tiêu Sầu - SS X AM Remix.mp3",
+            image: "./assets/image/CTCTL2.png"
+        },
+        {
             name: "Phố đã lên đèn",
             singer: "Công Sơn",
             path: "./assets/music/pho_da_len_den_huyen_tam_mon_cukak_remix_audio_lyrics_-2498468810678559091.mp3",
